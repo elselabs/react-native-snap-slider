@@ -1,0 +1,27 @@
+{
+  "name": "@elselabs/react-native-snap-slider",
+  "version": "1.0.0",
+  "description": "Provides labels and snap control for React-Native Slider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elselabs/react-native-snap-slider.git"
+  },
+  "keywords": [
+    "react-native",
+    "slider",
+    "snap"
+  ],
+  "author": "Else Labs Inc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elselabs/react-native-snap-slider/issues"
+  },
+  "homepage": "https://github.com/elselabs/react-native-snap-slider#readme",
+  "dependencies": {
+    "@react-native-community/slider": "^3.0.3"
+  }
+}
