@@ -4,11 +4,18 @@ import Slider from '@react-native-community/slider';
 import PropTypes from 'prop-types';
 
 class SnapSlider extends React.Component {
-    getInitialState() {
-        const sliderRatio = this.props.maximumValue / (this.props.items.length - 1);
-        const value = sliderRatio * this.props.defaultItem;
-        const item = this.props.defaultItem;
-        return {
+    constructor(props) {
+        super(props);
+        this._sliderStyle = this._sliderStyle.bind(this);
+        this._onSlidingCompleteCallback = this._onSlidingCompleteCallback.bind(this);
+        this._getItemWidth = this._getItemWidth.bind(this);
+        this._getSliderWidth = this._getSliderWidth.bind(this);
+        this._labelView = this._labelView.bind(this);
+
+        const sliderRatio = props.maximumValue / (props.items.length - 1);
+        const value = sliderRatio * props.defaultItem;
+        const item = props.defaultItem;
+        this.state = {
             sliderRatio: sliderRatio,
             value: value,
             item: item,
@@ -16,13 +23,6 @@ class SnapSlider extends React.Component {
             itemWidth: [],
             sliderWidth: 0,
             sliderLeft: 0,
-        };
-    }
-
-    getDefaultProps() {
-        return {
-            minimumValue: 0,
-            maximumValue: 1,
         };
     }
     
@@ -135,6 +135,11 @@ SnapSlider.propTypes = {
     items: PropTypes.array.isRequired,
     defaultItem: PropTypes.number,
     labelPosition: PropTypes.string
+}
+
+SnapSlider.defaultProps = {
+    minimumValue: 0,
+    maximumValue: 1,
 }
 
 
