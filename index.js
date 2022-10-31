@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ViewPropTypes } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Slider from '@react-native-community/slider';
 import PropTypes from 'prop-types';
 
@@ -128,9 +128,9 @@ var defaultStyles = StyleSheet.create({
 
 SnapSlider.propTypes = {
     onSlidingComplete: PropTypes.func,
-    style: ViewPropTypes.style,
-    containerStyle: ViewPropTypes.style,
-    itemWrapperStyle: ViewPropTypes.style,
+    style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+    containerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+    itemWrapperStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     itemStyle: Text.propTypes.style,
     items: PropTypes.array.isRequired,
     defaultItem: PropTypes.number,
