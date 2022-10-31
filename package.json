@@ -1,6 +1,6 @@
 {
   "name": "@elselabs/react-native-snap-slider",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides labels and snap control for React-Native Slider",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/elselabs/react-native-snap-slider#readme",
   "dependencies": {
-    "@react-native-community/slider": "^4.0.0-rc.3"
+    "@react-native-community/slider": "^4.3.2"
   }
 }
