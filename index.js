@@ -131,7 +131,7 @@ SnapSlider.propTypes = {
     style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     containerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     itemWrapperStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-    itemStyle: Text.propTypes.style,
+    itemStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     items: PropTypes.array.isRequired,
     defaultItem: PropTypes.number,
     labelPosition: PropTypes.string
